@@ -14,7 +14,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class Controller implements Initializable {
+public class VentanaController implements Initializable {
 	
 	// view
 	@FXML
@@ -32,9 +32,9 @@ public class Controller implements Initializable {
 	private Stage stage;
 	
 	// model
-	private Model model = new Model();
+	private VentanaModel model = new VentanaModel();
 	
-	public Controller(Properties properties) throws IOException {
+	public VentanaController(Properties properties) throws IOException {
 		model.setRed(Integer.valueOf((String) properties.get("background.red")));
 		model.setGreen(Integer.valueOf((String) properties.get("background.green")));
 		model.setBlue(Integer.valueOf((String) properties.get("background.blue")));
@@ -96,11 +96,11 @@ public class Controller implements Initializable {
 		this.view = view;
 	}
 
-	public Model getModel() {
+	public VentanaModel getModel() {
 		return model;
 	}
 
-	public void setModel(Model model) {
+	public void setModel(VentanaModel model) {
 		this.model = model;
 	}	
 

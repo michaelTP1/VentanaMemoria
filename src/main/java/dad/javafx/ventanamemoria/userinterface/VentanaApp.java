@@ -11,9 +11,9 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class App extends Application {
+public class VentanaApp extends Application {
 	
-	private Controller controller;
+	private VentanaController controller;
 	private String ruta = System.getProperty("user.home");
 	
 	private void initialConfig(File fichero) throws IOException {
@@ -45,7 +45,7 @@ public class App extends Application {
 		}
 		
 		prop.load(new FileInputStream(fConfig));
-		controller = new Controller(prop);
+		controller = new VentanaController(prop);
 	}
 	
 	@Override
@@ -64,7 +64,7 @@ public class App extends Application {
 	public void stop() throws Exception {
 		Properties prop = new Properties();
 		File configFile = new File(ruta + "\\.VentanaConMemoria\\ventana.config");
-		Model model = controller.getModel();
+		VentanaModel model = controller.getModel();
 		
 		if (!configFile.getParentFile().exists() && !configFile.getParentFile().mkdirs())
 			throw new IllegalStateException("No se pudo crear la carpeta");

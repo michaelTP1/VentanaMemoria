@@ -5,7 +5,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
-public class Model {
+public class VentanaModel {
 	private IntegerProperty red = new SimpleIntegerProperty();
 	private IntegerProperty green = new SimpleIntegerProperty();
 	private IntegerProperty blue = new SimpleIntegerProperty();
